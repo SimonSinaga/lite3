@@ -1,0 +1,243 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SIMKES Khanza - Pasien</title>
+    <link rel="icon" href="http://localhost/lite3/favicon.png" type="image/x-icon">
+    <link href="http://localhost/lite3/assets/css/bootstrap.min.css?v=3.2" rel="stylesheet">
+    <link href="http://localhost/lite3/assets/css/bootstrap-theme.min.css?v=3.2" rel="stylesheet">
+    <link href="http://localhost/lite3/assets/css/animate.min.css?v=3.2" rel="stylesheet">
+    <link href="http://localhost/lite3/themes/admin/css/selectator.css?v=3.2&t=1bdf2736be5c" rel="stylesheet">
+    <link href="http://localhost/lite3/themes/admin/css/style.css?v=3.2&t=1bdf2736be5c" rel="stylesheet">
+    <link href="http://localhost/lite3/assets/css/font-awesome.css?v=3.2" rel="stylesheet">
+    <script src="http://localhost/lite3/assets/jscripts/jquery.min.js"></script>
+    <script src="http://localhost/lite3/assets/jscripts/bootstrap.min.js?v=3.2"></script>
+    <script src="http://localhost/lite3/assets/jscripts/bootbox.min.js?v=3.2"></script>
+    <script src="http://localhost/lite3/assets/jscripts/html.sortable.min.js?v=3.2"></script>
+    <script src="http://localhost/lite3/assets/jscripts/tinynav.min.js?v=3.2"></script>
+    <script src="http://localhost/lite3/themes/admin/js/kalypto.min.js?v=3.2&t=1bdf2736be5c"></script>
+    <script src="http://localhost/lite3/themes/admin/js/selectator.js?v=3.2&t=1bdf2736be5c"></script>
+    <script>
+        var opensimrs = {token:"1bdf2736be5c", url:"http://localhost/lite3", admin:"admin"};
+    </script>
+    <meta name="generator" content="PinkMED" />
+<link rel="stylesheet" href="http://localhost/lite3/assets/css/jquery-ui.css">
+<link rel="stylesheet" href="http://localhost/lite3/assets/css/dataTables.bootstrap.min.css">
+<link rel="stylesheet" href="http://localhost/lite3/assets/jscripts/lightbox/lightbox.min.css">
+<script src="http://localhost/lite3/assets/jscripts/lightbox/lightbox.min.js"></script>
+<link rel="stylesheet" href="http://localhost/lite3/admin/pasien/css?t=1bdf2736be5c">
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <aside id="sidebar-wrapper">
+            <div class="user-info">
+                <div class="image">
+                    <img src="http://localhost/lite3/plugins/users/img/default.png" width="48" height="48" alt="User" />
+                </div>
+                <div class="info-container">
+                    <div class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Administrator</div>
+                    <div class="email">spv</div>
+                </div>
+            </div>
+            <ul class="sidebar-nav">
+                            <li class="" data-module="dashboard">
+                    <a href="#"><i class="fa fa-home"></i>Dashboard</a>
+                                        <ul class="collapse">
+                                                <li class=""><a href="http://localhost/lite3/admin/dashboard/main?t=1bdf2736be5c">Main</a></li>
+                                                <li class=""><a href="http://localhost/lite3/admin/dashboard/settings?t=1bdf2736be5c">Pengaturan</a></li>
+                                            </ul>
+                                    </li>
+                            <li class="active" data-module="pasien">
+                    <a href="#"><i class="fa fa-users"></i>Pasien</a>
+                                        <ul class="collapse">
+                                                <li class="active"><a href="http://localhost/lite3/admin/pasien/manage?t=1bdf2736be5c">Kelola</a></li>
+                                                <li class=""><a href="http://localhost/lite3/admin/pasien/add?t=1bdf2736be5c">Tambah Baru</a></li>
+                                                <li class=""><a href="http://localhost/lite3/admin/pasien/master?t=1bdf2736be5c">Master Pasien</a></li>
+                                                <li class=""><a href="http://localhost/lite3/admin/pasien/settings?t=1bdf2736be5c">Pengaturan</a></li>
+                                            </ul>
+                                    </li>
+                            <li class="" data-module="settings">
+                    <a href="#"><i class="fa fa-wrench"></i>Pengaturan</a>
+                                        <ul class="collapse">
+                                                <li class=""><a href="http://localhost/lite3/admin/settings/general?t=1bdf2736be5c">Instansi</a></li>
+                                                <li class=""><a href="http://localhost/lite3/admin/settings/aplikasi?t=1bdf2736be5c">Aplikasi</a></li>
+                                                <li class=""><a href="http://localhost/lite3/admin/settings/updates?t=1bdf2736be5c">Update</a></li>
+                                            </ul>
+                                    </li>
+                            <li class="" data-module="kepegawaian">
+                    <a href="#"><i class="fa fa-group"></i>Kepegawaian</a>
+                                        <ul class="collapse">
+                                                <li class=""><a href="http://localhost/lite3/admin/kepegawaian/manage?t=1bdf2736be5c">Data Pegawai</a></li>
+                                                <li class=""><a href="http://localhost/lite3/admin/kepegawaian/add?t=1bdf2736be5c">Tambah Baru</a></li>
+                                                <li class=""><a href="http://localhost/lite3/admin/kepegawaian/master?t=1bdf2736be5c">Master Pegawai</a></li>
+                                            </ul>
+                                    </li>
+                            <li class="" data-module="kasir">
+                    <a href="http://localhost/lite3/admin/kasir/manage?t=1bdf2736be5c"><i class="fa fa-shopping-basket"></i>Kasir</a>
+                                    </li>
+                            <li class="" data-module="pendaftaran">
+                    <a href="#"><i class="fa fa-user-plus"></i>Pendaftaran</a>
+                                        <ul class="collapse">
+                                                <li class=""><a href="http://localhost/lite3/admin/pendaftaran/manage?t=1bdf2736be5c">Kelola</a></li>
+                                                <li class=""><a href="http://localhost/lite3/admin/pendaftaran/booking?t=1bdf2736be5c">Booking</a></li>
+                                                <li class=""><a href="http://localhost/lite3/admin/pendaftaran/add?t=1bdf2736be5c">Tambah Baru</a></li>
+                                                <li class=""><a href="http://localhost/lite3/admin/pendaftaran/jadwal?t=1bdf2736be5c">Jadwal Dokter</a></li>
+                                                <li class=""><a href="http://localhost/lite3/admin/pendaftaran/settings?t=1bdf2736be5c">Pengaturan</a></li>
+                                            </ul>
+                                    </li>
+                            <li class="" data-module="jkn_mobile">
+                    <a href="#"><i class="fa fa-tasks"></i>JKN Mobile</a>
+                                        <ul class="collapse">
+                                                <li class=""><a href="http://localhost/lite3/admin/jkn_mobile/index?t=1bdf2736be5c">Kelola</a></li>
+                                                <li class=""><a href="http://localhost/lite3/admin/jkn_mobile/settings?t=1bdf2736be5c">Pengaturan</a></li>
+                                            </ul>
+                                    </li>
+                            <li class="" data-module="jkn_mobile_fktp">
+                    <a href="#"><i class="fa fa-tasks"></i>JKN Mobile FKTP</a>
+                                        <ul class="collapse">
+                                                <li class=""><a href="http://localhost/lite3/admin/jkn_mobile_fktp/index?t=1bdf2736be5c">Kelola</a></li>
+                                                <li class=""><a href="http://localhost/lite3/admin/jkn_mobile_fktp/settings?t=1bdf2736be5c">Pengaturan</a></li>
+                                            </ul>
+                                    </li>
+                            <li class="" data-module="master">
+                    <a href="#"><i class="fa fa-cubes"></i>Data Master</a>
+                                        <ul class="collapse">
+                                                <li class=""><a href="http://localhost/lite3/admin/master/dokter?t=1bdf2736be5c">Dokter</a></li>
+                                                <li class=""><a href="http://localhost/lite3/admin/master/petugas?t=1bdf2736be5c">Petugas</a></li>
+                                                <li class=""><a href="http://localhost/lite3/admin/master/poliklinik?t=1bdf2736be5c">Poliklinik</a></li>
+                                                <li class=""><a href="http://localhost/lite3/admin/master/bangsal?t=1bdf2736be5c">Bangsal</a></li>
+                                                <li class=""><a href="http://localhost/lite3/admin/master/kamar?t=1bdf2736be5c">Kamar</a></li>
+                                                <li class=""><a href="http://localhost/lite3/admin/master/databarang?t=1bdf2736be5c">Data Barang</a></li>
+                                                <li class=""><a href="http://localhost/lite3/admin/master/jnsperawatan?t=1bdf2736be5c">Perawatan Ralan</a></li>
+                                                <li class=""><a href="http://localhost/lite3/admin/master/jnsperawatanlab?t=1bdf2736be5c">Perawatan Laboratorium</a></li>
+                                                <li class=""><a href="http://localhost/lite3/admin/master/jnsperawatanrad?t=1bdf2736be5c">Perawatan Radiologi</a></li>
+                                            </ul>
+                                    </li>
+                            <li class="" data-module="modules">
+                    <a href="#"><i class="fa fa-plug"></i>Modul-Modul</a>
+                                        <ul class="collapse">
+                                                <li class=""><a href="http://localhost/lite3/admin/modules/manage?t=1bdf2736be5c">Kelola</a></li>
+                                                <li class=""><a href="http://localhost/lite3/admin/modules/upload?t=1bdf2736be5c">Upload</a></li>
+                                            </ul>
+                                    </li>
+                            <li class="" data-module="users">
+                    <a href="#"><i class="fa fa-user-md"></i>Pengguna</a>
+                                        <ul class="collapse">
+                                                <li class=""><a href="http://localhost/lite3/admin/users/manage?t=1bdf2736be5c">Kelola</a></li>
+                                                <li class=""><a href="http://localhost/lite3/admin/users/add?t=1bdf2736be5c">Tambah Baru</a></li>
+                                            </ul>
+                                    </li>
+                        </ul>
+        </aside>
+
+        <div id="navbar-wrapper">
+            <nav class="navbar navbar-inverse">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a href="#" id="sidebar-toggle"><i class="fa fa-bars"></i></a> <div class="navbar-brand"><a href="http://localhost/lite3/admin/"><span class="first">SIMKES Khanza</span></a></div>
+                    </div>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="hello hidden-sm hidden-xs"><a href="#"><i class="fa fa-fw fa-user-md"></i> <span>Apa kabar <strong>Administrator</strong>?</span></a></li>
+                        <li class="hidden-sm hidden-xs"><a href="http://localhost/lite3" target="_blank" class="fa fa-globe" data-toggle="tooltip" data-placement="bottom" title="Tampilkan"></a></li>
+                        <li><a href="http://localhost/lite3/admin/logout?t=1bdf2736be5c" class="fa fa-power-off" data-toggle="tooltip" data-placement="bottom" title="Keluar"></a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+		
+        <section id="content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h2 class="content-title">Pasien</h2>
+                        <article class="row">
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Kelola Pasien</h3>
+            </div>
+            <div class="panel-body">
+              <div class="row clearfix">
+                <div class="col col-md-6">
+                  <h3 style="margin-top:5px;margin-bottom:15px;">Jumlah: 1</h3>
+                </div>
+                <div class="col col-md-6">
+                  <form action="" class="searchbox-input form-inline pull-right padding-bottom-lg" style="margin-top:5px;margin-bottom:15px;">
+                      <div class="input-group">
+                          <input type="text" name="s" minlength="3" class="form-control" placeholder="Search" required>
+                          <input type="hidden" name="t" value="1bdf2736be5c">
+                          <span class="input-group-btn">
+                              <button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+                          </span>
+                      </div>
+                  </form>
+                </div>
+              </div>
+    					<div class="table-responsive no-margin">
+    						<table class="table table-striped no-margin">
+    							<thead>
+    								<tr>
+    									<th>No. RM</th>
+    									<th>Nama Pasien</th>
+                      <th>No. KTP</th>
+    									<th>Alamat</th>
+                      <th>Pekerjaan</th>
+                      <th>No. Peserta</th>
+                      <th>Umur</th>
+                      <th>No. Telepon</th>
+    									<th class="text-right">Aksi</th>
+    								</tr>
+    							</thead>
+    							<tbody>
+            						    								    								<tr>
+    									<td><a href="http://localhost/lite3/admin/pasien/edit/000003?t=1bdf2736be5c">000003</a></td>
+    									<td><a href="http://localhost/lite3/admin/pasien/view/000003?t=1bdf2736be5c">Simon</a></td>
+                      <td>1207231409970001</td>
+    									<td>asasdad</td>
+                      <td></td>
+                      <td>0001837931343</td>
+                      <td>23 Th 1 Bl 1 Hr</td>
+                      <td>085369854785</td>
+    									<td class="text-right">
+    										<a href="http://localhost/lite3/admin/pasien/view/000003?t=1bdf2736be5c" class="btn btn-primary btn-xs">
+    											<i class="fa fa-search"></i> <span class="hidden-xs">Tampil</span>
+    										</a>
+    										<a href="http://localhost/lite3/admin/pasien/edit/000003?t=1bdf2736be5c" class="btn btn-success btn-xs">
+    											<i class="fa fa-pencil"></i> <span class="hidden-xs">Ganti</span>
+    										</a>
+    										<a href="http://localhost/lite3/admin/pasien/delete/000003?t=1bdf2736be5c" class="btn btn-danger btn-xs" data-confirm="Yakin ingin menghapus?">
+    											<i class="fa fa-trash-o"></i> <span class="hidden-xs">Hapus</span>
+    										</a>
+    									</td>
+    								</tr>
+    								    								    							</tbody>
+    						</table>
+    					</div>
+					            </div>
+        </div>
+    </div>
+</article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <footer class="hidden-xs hidden-sm hidden-md">
+        Dikembangkan dengan <i class="fa fa-heart text-danger"></i> oleh <a href="https://basoro.id/" target="_blank"><b>drg. F. Basoro</b></a>
+    </footer>
+
+    <script src="http://localhost/lite3/themes/admin/js/scripts.js?v=3.2&t=1bdf2736be5c"></script>
+    <script src="http://localhost/lite3/assets/jscripts/jquery-ui.js"></script>
+<script src="http://localhost/lite3/assets/jscripts/jquery.dataTables.min.js"></script>
+<script src="http://localhost/lite3/assets/jscripts/dataTables.bootstrap.min.js"></script>
+<script src="http://localhost/lite3/admin/pasien/javascript?t=1bdf2736be5c"></script>
+</body>
+</html>

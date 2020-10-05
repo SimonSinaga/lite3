@@ -1,0 +1,450 @@
+<article class="row">
+	<form name="pasien" action="http://localhost/lite3/admin/pasien/save/000003?t=1bdf2736be5c" method="POST" enctype="multipart/form-data">
+		<div class="col-md-8">
+		    <div class="panel panel-default">
+                <div class="panel-heading">
+		            <h3 class="panel-title">Informasi Pribadi</h3>
+                </div>
+                <div class="panel-body">
+										<div class="row clearfix">
+												<div class="col-md-6">
+														<div class="form-group">
+																<label>Nomor RM</label>
+				                        <input type="text" name="no_rkm_medis" class="form-control" required value="000003" readonly />
+					    	            </div>
+												</div>
+												<div class="col-md-6">
+														<div class="form-group">
+					    	                <label>Nomor KTP</label>
+																<div class="input-group">
+					    	                		<input type="text" name="no_ktp" class="form-control" id="no_ktp" required value="1207231409970001" />
+																		<span class="input-group-addon">
+																				<div class="dropdown">
+																						<a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+																								<i class="fa fa-paperclip"></i>
+																						</a>
+																						<ul class="dropdown-menu pull-right">
+																								<li><a href="javascript:void(0);" onclick="cekNikBPJS()">Bridging NIK BPJS</a></li>
+																						</ul>
+																				</div>
+																		</span>
+																</div>
+					    	            </div>
+												</div>
+										</div>
+										<div class="row clearfix">
+												<div class="col-md-6">
+				                    <div class="form-group">
+				      	                <label>Nama lengkap</label>
+				      	                <input type="text" name="nm_pasien" id="nm_pasien" class="form-control" placeholder="Nama lengkap (optional)" value="Simon" />
+				      	            </div>
+												</div>
+												<div class="col-md-6">
+														<div class="form-group">
+					    	                <label>Nama Ibu</label>
+					    	                <input type="text" name="nm_ibu" class="form-control" placeholder="Nama lengkap ibu (optional)" value="" />
+					    	            </div>
+												</div>
+										</div>
+										<div class="row clearfix">
+												<div class="col-md-3">
+														<div class="form-group">
+					    	                <label>Tempat Lahir</label>
+					    	                <input type="text" name="tmp_lahir" class="form-control" placeholder="Tempat Lahir" value="Medan" />
+					    	            </div>
+												</div>
+												<div class="col-md-3">
+														<div class="form-group">
+				      	                <label>Tanggal Lahir</label>
+				      	                <input type="text" name="tgl_lahir" id="tgl_lahir" class="form-control datepicker" placeholder="Tanggl lahir" value="1997-09-04" />
+				      	            </div>
+												</div>
+												<div class="col-md-3">
+														<div class="form-group">
+																<label>Jenis Kelamin</label>
+																<select name="jk" id="jk" class="form-control">
+																																			<option value="L" selected>L</option>
+																																			<option value="P">P</option>
+																																	</select>
+														</div>
+												</div>
+												<div class="col-md-3">
+														<div class="form-group">
+																<label>Golongan Darah</label>
+																<select name="gol_darah" class="form-control">
+																																			<option value="A" selected>A</option>
+																																			<option value="B">B</option>
+																																			<option value="O">O</option>
+																																			<option value="AB">AB</option>
+																																			<option value="-">-</option>
+																																	</select>
+														</div>
+												</div>
+										</div>
+										<div class="row clearfix">
+												<div class="col-md-3">
+														<div class="form-group">
+																<label>Agama</label>
+																<select name="agama" class="form-control">
+																																			<option value="ISLAM" selected>ISLAM</option>
+																																			<option value="KRISTEN">KRISTEN</option>
+																																			<option value="PROTESTAN">PROTESTAN</option>
+																																			<option value="HINDU">HINDU</option>
+																																			<option value="BUDHA">BUDHA</option>
+																																			<option value="KONGHUCU">KONGHUCU</option>
+																																			<option value="KEPERCAYAAN">KEPERCAYAAN</option>
+																																	</select>
+														</div>
+												</div>
+												<div class="col-md-3">
+														<div class="form-group">
+																<label>Pendidikan</label>
+																<select name="pnd" class="form-control">
+																																			<option value="TS" selected>TS</option>
+																																			<option value="TK">TK</option>
+																																			<option value="SD">SD</option>
+																																			<option value="SMP">SMP</option>
+																																			<option value="SMA">SMA</option>
+																																			<option value="SLTA/SEDERAJAT">SLTA/SEDERAJAT</option>
+																																			<option value="D1">D1</option>
+																																			<option value="D2">D2</option>
+																																			<option value="D3">D3</option>
+																																			<option value="D4">D4</option>
+																																			<option value="S1">S1</option>
+																																			<option value="S2">S2</option>
+																																			<option value="S3">S3</option>
+																																			<option value="-">-</option>
+																																	</select>
+														</div>
+												</div>
+												<div class="col-md-3">
+														<div class="form-group">
+																<label>Pekerjaan</label>
+																<input type="text" name="pekerjaan" class="form-control" placeholder="Pekerjaan" value="" />
+														</div>
+												</div>
+												<div class="col-md-3">
+														<div class="form-group">
+																<label>Status Nikah</label>
+																<select name="stts_nikah" class="form-control">
+																																			<option value="BELUM MENIKAH" selected>BELUM MENIKAH</option>
+																																			<option value="MENIKAH">MENIKAH</option>
+																																			<option value="JANDA">JANDA</option>
+																																			<option value="DUDHA">DUDHA</option>
+																																			<option value="JOMBLO">JOMBLO</option>
+																																	</select>
+														</div>
+												</div>
+										</div>
+										<div class="form-group">
+      	                <label>Alamat</label>
+      	                <textarea class="form-control" name="alamat" id="alamat" placeholder="Alamat (optional)" rows="4">asasdad</textarea>
+      	            </div>
+										<div class="row clearfix">
+												<div class="col-md-6">
+														<div class="form-group">
+					    	                <label>Provinsi</label>
+																<div class="input-group">
+																		<input type="hidden" name="kd_prop" value="17" id="kd_prop">
+																		<input type="text" value="BENGKULU" id="namaprop" class="form-control" placeholder="Propinsi" disabled>
+																		<span class="input-group-addon" data-toggle="modal" data-target="#propinsiModal">
+																				<i class="fa fa-paperclip"></i>
+																		</span>
+																</div>
+					    	            </div>
+												</div>
+												<div class="col-md-6">
+														<div class="form-group">
+					    	                <label>Kabupaten / Kota</label>
+																<div class="input-group">
+																		<input type="hidden" name="kd_kab" value="1705" id="kd_kab">
+																		<input type="text" value="KABUPATEN SELUMA" id="namakab" class="form-control" placeholder="Kabupaten" disabled>
+																		<span class="input-group-addon" data-toggle="modal" data-target="#kabupatenModal">
+																				<i class="fa fa-paperclip"></i>
+																		</span>
+																</div>
+					    	            </div>
+												</div>
+										</div>
+										<div class="row clearfix">
+												<div class="col-md-6">
+														<div class="form-group">
+					    	                <label>Kecamatan</label>
+																<div class="input-group">
+																		<input type="hidden" name="kd_kec" value="1705040" id="kd_kec">
+																		<input type="text" value="SELUMA" id="namakec" class="form-control" placeholder="Kecamatan" disabled>
+																		<span class="input-group-addon" data-toggle="modal" data-target="#kecamatanModal">
+																				<i class="fa fa-paperclip"></i>
+																		</span>
+																</div>
+					    	            </div>
+												</div>
+												<div class="col-md-6">
+														<div class="form-group">
+					    	                <label>Kelurahan</label>
+																<div class="input-group">
+																		<input type="hidden" name="kd_kel" value="1705040031" id="kd_kel">
+																		<input type="text" value="LUBUK KEBUR" id="namakel" class="form-control" placeholder="Kelurahan" disabled>
+																		<span class="input-group-addon" data-toggle="modal" data-target="#kelurahanModal">
+																				<i class="fa fa-paperclip"></i>
+																		</span>
+																</div>
+					    	            </div>
+												</div>
+										</div>
+                </div>
+            </div>
+
+					<div class="panel panel-default">
+              <div class="panel-heading">
+	            <h3 class="panel-title">Informasi Keluarga</h3>
+              </div>
+              <div class="panel-body">
+									<div class="row clearfix">
+											<div class="col-md-4">
+													<div class="form-group">
+				    	                <label>Keluarga</label>
+															<select name="keluarga" class="form-control">
+																																	<option value="AYAH" selected>AYAH</option>
+																																	<option value="IBU">IBU</option>
+																																	<option value="ISTRI">ISTRI</option>
+																																	<option value="SUAMI">SUAMI</option>
+																																	<option value="SAUDARA">SAUDARA</option>
+																																	<option value="ANAK">ANAK</option>
+																															</select>
+				    	            </div>
+											</div>
+											<div class="col-md-4">
+													<div class="form-group">
+				    	                <label>Nama Keluarga</label>
+				    	                <input type="text" name="namakeluarga" class="form-control" value="" />
+				    	            </div>
+											</div>
+											<div class="col-md-4">
+													<div class="form-group">
+				    	                <label>Pekerjaan Keluarga</label>
+				    	                <input type="text" name="pekerjaanpj" class="form-control" value="" />
+				    	            </div>
+											</div>
+									</div>
+									<div class="form-group">
+											<button type='button' id='copy_alamat' class='btn btn-xs btn-white pull-right'><i class='fa fa-refresh'></i> Sama Dengan Pasien</button>
+    	                <label>Alamat</label>
+    	                <textarea class="form-control" name="alamatpj" id="alamatpj" placeholder="Alamat (optional)" rows="4"></textarea>
+    	            </div>
+									<div class="row clearfix">
+											<div class="col-md-6">
+													<div class="form-group">
+				    	                <label>Provinsi</label>
+				    	                <input type="text" name="propinsipj" id="propinsipj" class="form-control" value="" />
+				    	            </div>
+											</div>
+											<div class="col-md-6">
+													<div class="form-group">
+				    	                <label>Kabupaten / Kota</label>
+				    	                <input type="text" name="kabupatenpj" id="kabupatenpj" class="form-control" value="" />
+				    	            </div>
+											</div>
+									</div>
+									<div class="row clearfix">
+											<div class="col-md-6">
+													<div class="form-group">
+				    	                <label>Kecamatan</label>
+				    	                <input type="text" name="kecamatanpj" id="kecamatanpj" class="form-control" value="" />
+				    	            </div>
+											</div>
+											<div class="col-md-6">
+													<div class="form-group">
+				    	                <label>Kelurahan</label>
+				    	                <input type="text" name="kelurahanpj" id="kelurahanpj" class="form-control" value="" />
+				    	            </div>
+											</div>
+									</div>
+              </div>
+          </div>
+	    </div>
+
+	    <div class="col-md-4">
+		    	<div class="panel panel-default">
+                <div class="panel-heading">
+		    	    	<h3 class="panel-title">Informasi Tambahan</h3>
+                </div>
+                <div class="panel-body">
+									<div class="form-group">
+	                    <label>Foto</label>
+	                    <div>
+	                      <img src="http://localhost/lite3/webapps/photopasien" width="96" height="96" class="img-thumbnail" id="photoPreview" style="cursor:pointer;" onclick="$('input[name=photo]').click()" />
+	                      <input type="file" name="photo" class="form-control hidden" />
+	                    </div>
+	                </div>
+									<div class="form-group">
+											<label>Nomor HP</label>
+											<input type="number" name="no_tlp" id="no_tlp" class="form-control" value="085369854785" />
+									</div>
+									<div class="form-group">
+											<label>Cara Bayar</label>
+											<select name="kd_pj" class="form-control">
+																									<option value="-" selected>-</option>
+																							</select>
+									</div>
+									<div class="form-group">
+											<label>Nomor Peserta</label>
+											<div class="input-group">
+													<input type="text" name="no_peserta" id="no_peserta" class="form-control" placeholder="Nomor peserta asuransi (optional)" value="0001837931343" />
+													<span class="input-group-addon">
+															<div class="dropdown">
+																	<a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+																			<i class="fa fa-paperclip"></i>
+																	</a>
+																	<ul class="dropdown-menu pull-right">
+																			<li><a href="javascript:void(0);" onclick="cekNokaBPJS()">Bridging NOKA BPJS</a></li>
+																	</ul>
+															</div>
+													</span>
+											</div>
+									</div>
+									<div class="form-group">
+											<label>Perusahaan Pasien</label>
+											<select name="perusahaan_pasien" class="form-control">
+																									<option value="-" selected>-</option>
+																							</select>
+									</div>
+									<div class="form-group">
+											<label>Suku Bangsa</label>
+											<select name="suku_bangsa" class="form-control">
+																									<option value="1" selected>-</option>
+																							</select>
+									</div>
+									<div class="form-group">
+											<label>Bahasa</label>
+											<select name="bahasa_pasien" class="form-control">
+																									<option value="1" selected>-</option>
+																							</select>
+									</div>
+									<div class="form-group">
+											<label>Cacat Fisik</label>
+											<select name="cacat_fisik" class="form-control">
+																									<option value="1" selected>-</option>
+																							</select>
+									</div>
+
+                </div>
+		    	</div>
+
+					<div class="panel panel-default">
+                <div class="panel-heading">
+		    	    <h3 class="panel-title">Pengaturan Lainnya</h3>
+                </div>
+                <div class="panel-body">
+									<div class="form-group">
+											<label>NIP</label>
+											<input type="number" name="nip" class="form-control" value="" />
+									</div>
+									<div class="form-group">
+											<label>Email</label>
+											<input type="text" name="email" class="form-control" value="" />
+									</div>
+                  <div class="form-group">
+                      <label>Tanggal Daftar</label>
+                      <input type="text" name="tgl_daftar" class="form-control datepicker" placeholder="Tanggl daftar" value="2020-09-01" />
+                  </div>
+
+		            <input type="submit" name="save" value="Simpan" class="btn btn-primary" />
+								<a href="http://localhost/lite3/admin/pasien/manage?t=1bdf2736be5c" class="btn btn-default">Batal</a>
+		        	</div>
+            </div>
+        </div>
+	</form>
+</article>
+
+<div class="modal fade" id="propinsiModal" tabindex="-1" role="dialog" aria-labelledby="propinsiModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+						<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+								<h4 class="modal-title" id="propinsiModalLabel">Database Propinsi</h4>
+						</div>
+						<div class="modal-body">
+								<table class="table table-striped table-hover propinsi" width="100%">
+										<thead>
+												<tr>
+														<th>Kode</th>
+														<th>Nama Propinsi</th>
+												</tr>
+										</thead>
+										<tbody id="propinsi">
+										</tbody>
+								</table>
+						</div>
+				</div>
+		</div>
+</div>
+
+<div class="modal fade" id="kabupatenModal" tabindex="-1" role="dialog" aria-labelledby="kabupatenModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+						<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+								<h4 class="modal-title" id="kabupatenModalLabel">Database Kabupaten</h4>
+						</div>
+						<div class="modal-body">
+								<table class="table table-striped table-hover kabupaten" width="100%">
+										<thead>
+												<tr>
+														<th>Kode</th>
+														<th>Nama Kabupaten</th>
+												</tr>
+										</thead>
+										<tbody id="kabupaten">
+										</tbody>
+								</table>
+						</div>
+				</div>
+		</div>
+</div>
+
+<div class="modal fade" id="kecamatanModal" tabindex="-1" role="dialog" aria-labelledby="kecamatanModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+						<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+								<h4 class="modal-title" id="kecamatanModalLabel">Database Kecamatan</h4>
+						</div>
+						<div class="modal-body">
+								<table class="table table-striped table-hover kecamatan" width="100%">
+										<thead>
+												<tr>
+														<th>Kode</th>
+														<th>Nama Kecamatan</th>
+												</tr>
+										</thead>
+										<tbody id="kecamatan">
+										</tbody>
+								</table>
+						</div>
+				</div>
+		</div>
+</div>
+
+<div class="modal fade" id="kelurahanModal" tabindex="-1" role="dialog" aria-labelledby="kelurahanModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+						<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+								<h4 class="modal-title" id="kelurahanModalLabel">Database Kelurahan</h4>
+						</div>
+						<div class="modal-body">
+								<table class="table table-striped table-hover kelurahan" width="100%">
+										<thead>
+												<tr>
+														<th>Kode</th>
+														<th>Nama Kelurahan</th>
+												</tr>
+										</thead>
+										<tbody id="kelurahan">
+										</tbody>
+								</table>
+						</div>
+				</div>
+		</div>
+</div>
